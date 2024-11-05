@@ -1,0 +1,6 @@
+{
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.editorActionsLocation": "default",
+    "window.experimentalControlOverlay": false,
+    "workbench.layoutControl.enabled": true
+}
