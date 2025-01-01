@@ -37,7 +37,3 @@
 - selecter
 
 
-
-### This is autocommite  testingdfadsfafafadfasdfa
-dfasdfasdfasdfasf
-asdfasfasdfasdfsadfgfdg
