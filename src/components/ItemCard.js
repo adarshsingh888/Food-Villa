@@ -42,7 +42,7 @@ function ItemCard(props) {
                 <p className='text-start'>{data.name}</p>
                 <p className='text-start'>{data?.description}</p>
                 <p className='text-start'>Price: &#8377; {data.price / 100}</p>
-                <b>{JSON.stringify(items)}</b>
+              
             </div>
         </div>
     );
