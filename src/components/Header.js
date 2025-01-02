@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
-import store from "../utils/appStore";
 
 const Header = () => {
   let [login,setlogin]=useState("Login");
@@ -15,6 +14,8 @@ const Header = () => {
   // Subscribing to store use selector
   const cartItems=useSelector((store)=> store.cart.items )
   console.log(cartItems)
+
+
   const reverse=()=>{
       if(login==="Login"){
         setlogin("Logout")
@@ -44,7 +45,7 @@ const Header = () => {
           <li className="px-4">  <Link to="/contact"> Contect</Link></li> 
           <li className="px-4 font-bold"><Link to='/cart'>Cart ({cartItems.length})</Link> </li>
           <li className="px-4"> <button type="button" className= {buttonclass }  onClick={reverse}>{login}</button></li>
-          <li className="px-4">  <button className="">Sign Up</button></li>
+          <li className="px-4">  <button className="" >Sign Up</button></li>
           <li className="px-4"><Link to=''>{loggedInUser}</Link> </li>
 
         </ul>

@@ -1,12 +1,19 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { CDN_URL } from '../utils/constant.js';
 import CartContext from '../utils/CartContext.js';
+import { useDispatch } from "react-redux";
+import { additems } from "../utils/cartSlice";
 
 function ItemCard(props) {
     const { items, setcartItem } = useContext(CartContext);
     const [ss, setss] = useState([]);
-
     const data = props.data;
+
+    const dispatch=useDispatch();
+
+    const addItems=()=>{
+         dispatch(additems(data))
+    }
 
     // Handle adding to cart by updating both local and global state
     const addinCart = () => {
@@ -25,7 +32,7 @@ function ItemCard(props) {
             <div className='p-4 w-2/12 relative flex'>
                 <button
                     className='absolute px-2 py-1 bg-black text-white rounded-lg flex items-center self-end'
-                    onClick={addinCart}
+                    onClick={addItems}
                 >
                     Add
                 </button>

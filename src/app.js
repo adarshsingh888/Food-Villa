@@ -25,7 +25,7 @@ const Page = () => {
      }
      setuserName(data.name);
    },[]);
-   console.log(userName)
+  // console.log(userName)
    
     
   const location = useLocation(); // Gives the current URL and state

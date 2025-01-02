@@ -29,11 +29,11 @@ const Body = () => {
       }
 
       const json = await response.json();
-      console.log(json)
+    //  console.log(json)
       const cards = json?.data?.cards[1].card.card.gridElements.infoWithStyle.restaurants || [];
       setCardData(cards);
       setFilteredData(cards);
-      console.log(cards)
+    //  console.log(cards)
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -48,7 +48,7 @@ const Body = () => {
     const topRated = cardData.filter(
       (list) => list?.info?.avgRating > 4.5
     );
-    console.log(topRated)
+   // console.log(topRated)
     setFilteredData(topRated);
     
   };
@@ -56,7 +56,7 @@ const Body = () => {
   if (cardData.length === 0) {
     return <SimmerBody/>;
   }
- console.log(cardData[0].data)
+// console.log(cardData[0].data)
 
   //Searching the resturant through keyword
   const clickSearch=()=>{
